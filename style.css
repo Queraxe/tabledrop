@@ -1,0 +1,37 @@
+:root {
+  --bg: #f7f7fa;
+  --surface: #ffffff;
+  --fg: #16161d;
+  --muted: #5f5f6e;
+  --line: #ebebf0;
+  --brand: #059669;
+  --brand-2: #0d9488;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #111114; --surface: #1b1b20; --fg: #ededf2; --muted: #a0a0ad; --line: #2a2a31; --brand: #34d399; --brand-2: #2dd4bf; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+nav { display: flex; align-items: center; gap: 10px; padding: 22px 0; }
+nav a.brand { display: flex; align-items: center; gap: 10px; font-weight: 650; color: inherit; text-decoration: none; font-size: 17px; }
+nav img { width: 28px; height: 28px; }
+nav .links { margin-left: auto; display: flex; gap: 18px; font-size: 14px; }
+a { color: var(--brand); }
+nav .links a { color: var(--muted); text-decoration: none; }
+nav .links a:hover { color: var(--fg); }
+h1 { font-size: clamp(30px, 6vw, 44px); line-height: 1.15; letter-spacing: -.02em; margin: 40px 0 16px; }
+h2 { font-size: 20px; margin: 36px 0 8px; letter-spacing: -.01em; }
+h3 { font-size: 16px; margin: 22px 0 4px; }
+.lead { font-size: 19px; color: var(--muted); margin: 0 0 28px; }
+.cta { display: inline-block; padding: 12px 22px; border-radius: 12px; color: #fff; font-weight: 600; text-decoration: none; background: linear-gradient(135deg, var(--brand), var(--brand-2)); }
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 48px 0; }
+.feature { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; }
+.feature strong { display: block; margin-bottom: 4px; }
+.feature span { color: var(--muted); font-size: 14px; }
+.doc { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 8px 28px 28px; margin: 24px 0; }
+.doc p, .doc li { color: var(--muted); }
+.doc strong { color: var(--fg); }
+.muted { color: var(--muted); }
+footer { border-top: 1px solid var(--line); margin-top: 56px; padding: 22px 0 40px; font-size: 14px; color: var(--muted); display: flex; gap: 18px; flex-wrap: wrap; }
+footer a { color: var(--muted); }
